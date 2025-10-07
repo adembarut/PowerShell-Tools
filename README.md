@@ -8,9 +8,3 @@ A collection of production-ready, highly reliable PowerShell modules and scripts
 | Tool / Module | Description | Key Features |
 | :--- | :--- | :--- |
 | **[`Export-ADStructureToVisio.ps1`](./AD-Visio-Mapper/Export-ADStructureToVisio.ps1)** | **Automates the visualization of the Active Directory OU and GPO structure** into a hierarchical Microsoft Visio diagram. Eliminates manual mapping, providing a clean, accurate, and scalable infrastructure documentation layer. | - **OU Hierarchy Mapping** <br> - **GPO Link Visualization** (Grouped or Standard) <br> - **Object Counting:** Displays User, Computer, and Group totals per OU (recursive). <br> - **Visio Automation** (Requires Visio client). |
-
-## Betikler ve Araçlara Genel Bakış
-
-| Betik / Modül | Açıklama | Temel Özellikler |
-| :--- | :--- | :--- |
-| **[`Export-ADStructureToVisio.ps1`](./AD-Visio-Mapper/Export-ADStructureToVisio.ps1)** | **Active Directory OU ve GPO yapısını hiyerarşik bir Microsoft Visio diyagramına otomatik olarak görselleştirir.** Manuel haritalama ihtiyacını ortadan kaldırarak, doğru ve ölçeklenebilir bir altyapı dokümantasyon katmanı sağlar. | - **OU Hiyerarşi Haritalaması** <br> - **GPO Bağlantı Görselleştirmesi** (Gruplu veya Standart) <br> - **Nesne Sayımı:** Her bir OU için Kullanıcı, Bilgisayar ve Grup toplamlarını gösterir. <br> - **Visio Otomasyonu** (Visio uygulamasını gerektirir). |
