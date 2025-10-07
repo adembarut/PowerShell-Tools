@@ -13,12 +13,4 @@ A collection of production-ready, highly reliable PowerShell modules and scripts
 
 ---
 
-### Yapılan Değişiklik:
 
-* **Link Yolu:** Scriptin adı etrafındaki köprü (`[...]`) kısmı, yeni klasör yapınızı yansıtacak şekilde güncellendi:
-    * Eski Yol: `./AD-Visio-Mapper/Export-ADStructureToVisio.ps1`
-    * **Yeni Yol:** `./Active Directory/AD Topology/Export-ADStructureToVisio.ps1`
-
-Bu yapı artık hem mantıksal olarak doğru klasörleri kullanıyor hem de profesyonel görünüyor.
-
-Başka bir script eklediğinizde, sadece tabloya yeni bir satır ekleyerek ve klasör yolunu belirterek bu listeyi kolayca genişletebilirsiniz. Başarılar dilerim!
