@@ -1,4 +1,4 @@
-﻿#############################################################################
+#############################################################################
 # Script Name: Export-ADStructureToVisio
 # Sürüm      : 8.13 - KRİTİK DÜZELTME: IncludeGPOs Parametresi [bool] yapıldı.
 # Purpose    : Active Directory OU ve GPO yapısını Visio'ya hiyerarşik olarak
@@ -83,7 +83,10 @@ $Script:gpoShapeNum = 0 # Ayrı çizimler için tekil isim sayacı
 
 function Get-GPOConnectionStyleCells {
     $con_cells = New-VisioShapeCells
-    $con_cells.LineColor = "rgb(0,175,240)"; $con_cells.LineEndArrowSize = "3"
+    # 1. RENK AYARI (Koyu Yeşil)
+    $con_cells.LineColor = "rgb(0,100,0)"; $con_cells.LineEndArrowSize = "3"
+    # 2. KALINLIK AYARI (0.10, görünür kalınlık)
+    $con_cells.LineWeight = "0.006"
     $con_cells.LineBeginArrowSize = "2"; $con_cells.LineEndArrow = "42" 
     $con_cells.LineBeginArrow = "4"; $con_cells.CharColor = "rgb(0,175,240)"
     return $con_cells
@@ -174,7 +177,8 @@ function Draw-GPOs-Grouped {
         $GroupShape.Name = "g_group_" + $CanonicalPath.Replace('/', '_').Replace('.', '_')
         
         $con = Connect-VisioShape -From $TargetShape -To $GroupShape -Master $Connector
-        $con.Text = "GPO Bağlantıları"; $con.Name = "gcon" + $Script:conCount
+   #GPO Bağlantılarına Text aşağıda yazılabilir
+        $con.Text = ""; $con.Name = "gcon" + $Script:conCount
         Set-VisioShapeCells -Cells (Get-GPOConnectionStyleCells) -Shape $con
         
         Set-VisioCustomProperty -Shape $GroupShape -Name "GPO_Numbers" -Value $GpoNumbersText
